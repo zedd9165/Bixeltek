@@ -1,103 +1,40 @@
 export const metadata = {
-    title: "Best SEO Services in Hyderabad | Trusted SEO Company | Bixeltek",
+    title: "SEO Services for Businesses | Get Found on Google",
     description:
-        "Boost your online presence with Bixeltek, a top SEO agency in Hyderabad. Our proven strategies help businesses dominate search results and drive organic growth.",
+        " Bixeltek helps businesses get more leads with SEO. Trusted SEO company serving India, USA, Canada, UAE, Saudi Arabia & UK. Get sustainable growth beyond Google Ads.",
     keywords:
         "SEO services Hyderabad, Best SEO agency Hyderabad, Digital marketing Hyderabad, Local SEO Hyderabad, Google ranking services, Technical SEO, On-page SEO, Off-page SEO, E-commerce SEO, SEO expert Hyderabad, Increase website traffic, SEO consultant Hyderabad",
     openGraph: {
-        title: " Best SEO Services in Hyderabad | Trusted SEO Company | Bixeltek",
+        title: " SEO Services for Businesses | Get Found on Google",
         description:
-            "Boost your online presence with Bixeltek, a top SEO agency in Hyderabad. Our proven strategies help businesses dominate search results and drive organic growth.",
+            " Bixeltek helps businesses get more leads with SEO. Trusted SEO company serving India, USA, Canada, UAE, Saudi Arabia & UK. Get sustainable growth beyond Google Ads.",
         type: "website",
     },
     alternates: {
-        canonical: "https://bixeltek.com/seo-agency-hyderabad", // 👈 canonical URL here
+        canonical: "https://bixeltek.com/services/seo-services", 
     },
 };
 
 export const dynamic = "force-dynamic";
 import React from 'react';
 import DarkFaqSection from '@/components/DarkFaq';
-import ContactFrom from '@/components/ContactFrom';
-import Link from 'next/link';
-import healthcare from "@/assets/digital marketing for health care practices.jpg";
-import oil from "@/assets/digital marketing for oil refinaries.jpg";
 import { FaSearch, FaTachometerAlt, FaFileAlt, FaStar, FaMapMarkerAlt, FaCode } from "react-icons/fa";
-import { PiGreaterThan } from "react-icons/pi";
 import SeoHero from '@/components/SeoHero';
-import pet from "@/assets/sincerely-media-VNsdEl1gORk-unsplash.jpg";
-import school from '@/assets/school.jpg'
-import roofing from "@/assets/digital marketing for roofing industries.jpg";
-import dental from "@/assets/digital marketing for health care practices.jpg";
-import lawncare from "@/assets/digital marketing for lawn care services.jpg";
-import blackcar from "@/assets/digital marketing for car detailers.jpg";
-import { VscDebugBreakpointDataUnverified } from "react-icons/vsc";
 import { FaTooth, FaHospital, FaDog, FaGasPump, FaCar, FaBroom, FaGraduationCap, FaBuilding, FaTree, FaSeedling } from "react-icons/fa";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { TbReportAnalytics } from "react-icons/tb";
 import { GrFlag } from "react-icons/gr";
 import { LuFileClock } from "react-icons/lu";
-import Image from 'next/image';
+import Link from 'next/link';
 import toast, { Toaster } from 'react-hot-toast';
-
-import tumblewashlogo from "@/assets/TumbleWash-Logo.webp";
-import revita from "@/assets/Revita-Logo-without-background-02-Colored-Font-01.png";
-import markham from "@/assets/Logo.png.webp";
-import durrat from "@/assets/durrat_logo.png";
-import daprbins from "@/assets/DAPrBINS.logo_.jpg";
-import oma from "@/assets/OMA-Computer-System-Trading-2-2048x426.webp";
-import rooted from '@/assets/Rooted_Logo_new-4-wbg.png';
-import wheellogo from '@/assets/head-logo.png';
-import edify from '@/assets/edify-new-logo-1.webp';
-import cylus from '@/assets/CYCAS-INVESTMENT-ADVISORS-2048x1677.png';
-import blooming from '@/assets/Logo2-2048x548.png';
-import cloud from '@/assets/logo-2.png';
-import ananta from '@/assets/Ananta Ananda-01.png';
-import daddysharklogo from "@/assets/daddyshark logo-01.png";
-
-
-
-
+import WhySeo from '@/components/Seo/SeoSection1';
+import SEOSection2 from '@/components/Seo/SeoSection2';
+import SEOGridSection from '@/components/Seo/SeoSection3';
+import WhyChooseBixeltek from '@/components/Seo/SeoSection4';
+import IndustryCarouselSection from '@/components/Hyderabad/HydSection8';
+import FAQSectionSEO from '@/components/Seo/SeoFaq';
+import SeoSection6 from '@/components/Seo/SeoSection6';
 export default function Seo() {
-
-
-
-    const industries = [
-        { name: "Dental", icon: <FaTooth /> },
-        { name: "Healthcare", icon: <FaHospital /> },
-        { name: "Pet Shops", icon: <FaDog /> },
-        { name: "Oil & Gas", icon: <FaGasPump /> },
-        { name: "Automobile", icon: <FaCar /> },
-        { name: "Roof Cleaning", icon: <FaBroom /> },
-        { name: "Education", icon: <FaGraduationCap /> },
-        { name: "Real Estate", icon: <FaBuilding /> },
-        { name: "Arborist & Tree Removal", icon: <FaTree /> },
-        { name: "Lawn Care", icon: <FaSeedling /> },
-    ];
-    const logos = [
-        { src: tumblewashlogo, alt: "TumbleWash" },
-        { src: daddysharklogo, alt: "Daddy Shark" },
-        { src: revita, alt: "Revita" },
-        { src: markham, alt: "Markham" },
-        { src: durrat, alt: "Durrat" },
-        { src: oma, alt: "OMA Computer System" },
-        { src: rooted, alt: "Rooted" },
-        { src: wheellogo, alt: "Wheels" },
-        { src: edify, alt: "Edify" },
-        { src: blooming, alt: "Blooming" },
-        { src: ananta, alt: "Ananta" },
-        { src: cloud, alt: "Cloud" },
-    ];
-
-    const seoChallenges = [
-        { icon: <FaSearch />, title: "Poor Keyword Targeting", desc: "Missing high-intent search queries that bring in buyers." },
-        { icon: <FaTachometerAlt />, title: "Slow Website Speed", desc: "A slow site leads to higher bounce rates & lower rankings." },
-        { icon: <FaFileAlt />, title: "Weak Content Strategy", desc: "Google favors sites with valuable, engaging, and optimized content." },
-        { icon: <FaStar />, title: "Low Domain Authority", desc: "Without high-quality backlinks, your competitors will outrank you." },
-        { icon: <FaMapMarkerAlt />, title: "Incomplete Google My Business", desc: "Losing local customers due to poor local SEO optimization." },
-        { icon: <FaCode />, title: "Lack of Technical SEO", desc: "Site structure, schema markup & mobile optimization need fixes." }
-    ];
-
     const faqs = [
         {
             question: "How much does SEO services cost in Hyderabad ?",
@@ -198,7 +135,11 @@ export default function Seo() {
                 reverseOrder={false}
             />
             <SeoHero />
-            <section className="max-w-5xl mx-auto text-center py-12">
+            <WhySeo />
+            <SEOSection2 />
+            <SEOGridSection />
+            <WhyChooseBixeltek />
+            {/* <section className="max-w-5xl mx-auto text-center py-12">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-sofiasanscondensed font-medium text-white mb-1">Why Your Website Isn&apos;t Ranking</h2>
                 <h2 className='text-5xl font-sofiasanscondensed text-purple-500 mb-6'>The SEO Challenge</h2>
 
@@ -217,10 +158,10 @@ export default function Seo() {
                         Book A Call With An <span className='text-purple-500 text-xl'>SEO Expert<PiGreaterThan className='inline-block text-lg group-hover:translate-x-2 transition-all duration-300 ml-1 mb-1' /></span>
                     </a>
                 </div>
-            </section>
+            </section> */}
 
 
-            <section>
+            {/* <section>
                 <section>
                     <div className="min-h-screen bg-black flex items-center justify-center px-0 md:px-4 py-10">
                         <div className="max-w-7xl w-full bg-black text-white rounded-xl shadow-md p-8 flex flex-col md:flex-row">
@@ -261,13 +202,13 @@ export default function Seo() {
                             </div>
 
 
-                            {/* Right Section: Contact Form */}
+
                             <ContactFrom />
                         </div>
                     </div>
                 </section>
-            </section>
-            <section className="pt-2 pb-20">
+            </section> */}
+            {/* <section className="pt-2 pb-20">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div
                         className="lg:py-14 lg:px-20 p-10 rounded-2xl bg-gradient-to-r from-indigo-800 to-violet-800 flex items-center justify-between flex-col lg:flex-row"
@@ -307,7 +248,7 @@ export default function Seo() {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* <section className="bg-black text-gray-300 py-16">
                 <div className="max-w-[90%] mx-auto px-6 lg:px-8">
                     
@@ -394,17 +335,19 @@ export default function Seo() {
             </section> */}
 
 
-            <section className='py-24'>
+            <section className='relative py-24'>
+                <div className="absolute top-32 -left-20 w-[500px] h-[500px] bg-blue-500 rounded-full opacity-30 blur-[190px] pointer-events-none"></div>
+                <div className="absolute bottom-52 right-0 w-[500px] h-[500px] bg-blue-500 rounded-full opacity-30 blur-[190px] pointer-events-none"></div>
                 <div>
                     <div className=' max-w-[80%] mx-auto mb-5 text-center'>
-                        <h2 className='text-white text-5xl font-sofiasanscondensed mb-3 font-semibold '>Our Comprehensive SEO Services in Hyderabad</h2>
-                        <p className='text-gray-100 text-[17px] tracking-wider max-w-3xl mx-auto'>We offer a full suite of strategies and solutions, meticulously designed to propel your website above the competition. Each service aims to improve your online presence, boost conversions, and ensure long-term digital growth.</p>
+                        <h2 className='text-white text-4xl lg:text-6xl max-w-7xl mx-auto font-inter mb-3 font-semibold '>Our <span className='text-blue-500'>Comprehensive SEO Services</span> in Hyderabad</h2>
+                        <p className='text-gray-100 text-base md:text-[17px] tracking-wider mt-4 max-w-3xl mx-auto'>At Bixeltek, our services are built around one goal: helping businesses turn visibility into revenue.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 max-w-[75%] mx-auto mt-10">
                         {seoServices.map((service, index) => (
                             <div
                                 key={index}
-                                className={`relative w-full h-80 border border-gray-800 bg-black hover:bg-[#670ef7] transition-all duration-300  flex flex-col justify-center items-center p-16`}>
+                                className={`relative w-full h-80 border border-gray-800 bg-black/10 hover:bg-blue-600 transition-all duration-300  flex flex-col justify-center items-center p-10 md:p-16`}>
 
                                 <h3 className="text-white text-3xl font-bold text-center mb-2">{service.title}</h3>
                                 <p className="text-gray-300 text-center">{service.description}</p>
@@ -431,88 +374,85 @@ export default function Seo() {
             </section>
 
 
-            <section className='pt-20 pb-10 md:pb-20'>
-                <div className='flex flex-col items-center gap-3'>
-                    <h2 className='text-4xl md:text-5xl text-center text-white font-sofiasanscondensed'>We&apos;re an <span className='text-[#670ef7]'>ROI-led</span> SEO agency. What does that mean?</h2>
-                    <p className='text-white max-w-[90%] md:max-w-5xl text-center text-[15px] md:text-[16px] '>It&apos;s simple. We&apos;re not just about ticking boxes or chasing vanity metrics. As SEO specialists,every campaign, every strategy, every decision we make is geared towards one goal: maximising your return on investment through our expert SEO services. Here&apos;s how we make it happen:</p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-10 gap-0 max-w-7xl text-white mx-auto text-center">
-
-                    <div className="flex flex-col gap-3 text-xl items-center border-none md:border-r md:border-dashed  border-[#670ef7] justify-center p-6 ">
-                        {items[0].icon}
-                        <h3 className="mt-2 font-semibold font-poppins">{items[0].text}</h3>
-                        <p className="text-sm mt-2">{items[0].description}</p>
-                    </div>
-
-                    {/* Top-right */}
-                    <div className="flex flex-col gap-3 text-xl items-center border-none md:border-r md:border-dashed  border-[#670ef7] justify-center p-6">
-                        {items[1].icon}
-                        <h3 className="mt-2 font-semibold font-poppins">{items[1].text}</h3>
-                        <p className="text-sm mt-2">{items[1].description}</p>
-                    </div>
-
-                    {/* Bottom-left */}
-                    <div className="flex flex-col gap-3 text-xl items-center justify-center p-6  border-none md:border-r md:border-dashed  border-[#670ef7]">
-                        {items[2].icon}
-                        <h3 className="mt-2 font-semibold font-poppins">{items[2].text}</h3>
-                        <p className="text-sm mt-2">{items[2].description}</p>
-                    </div>
-
-                    {/* Bottom-right */}
-                    <div className="flex flex-col gap-3 text-xl items-center  justify-center p-6">
-                        {items[3].icon}
-                        <h3 className="mt-2 font-semibold font-poppins">{items[3].text}</h3>
-                        <p className="text-sm mt-2 ">{items[3].description}</p>
-                    </div>
-                </div>
-            </section>
-            <section className='w-full flex flex-wrap max-w-[90%] mx-auto lg:flex-nowrap overflow-y-hidden items-center'>
-                {/* Left Content Section */}
-                <div className='w-full lg:w-1/2 px-6 py-10 lg:py-14'>
-                    <h2 className="text-4xl md:text-5xl font-semibold  font-sofiasanscondensed text-white">
-                        Proven Results Across <span className='text-purple-500'>Diverse Industries</span>
+            <section className="pt-20 pb-10 md:pb-20">
+                <div className="flex flex-col items-center gap-3">
+                    <h2 className="text-4xl max-w-6xl mx-auto md:text-6xl font-semibold text-center text-white font-inter">
+                        How We Help Businesses Thrive in the Age of{" "}
+                        <span className="text-blue-500">AI with AI-First SEO</span>
                     </h2>
-                    <p className="mt-4 text-[16px] md:text-lg text-gray-300">
-                        Our expertise spans multiple industries, helping businesses achieve growth through data-driven strategies and
-                        innovative solutions. From technology and finance to healthcare and retail, we empower brands with actionable insights
-                        and cutting-edge digital solutions.
+                    <p className="text-white max-w-[90%] md:max-w-5xl text-center text-[15px] md:text-[16px]">
+                        Search today is powered by AI Overviews, Answer Engines, and Generative
+                        Search. Customers no longer browse endless results — they rely on AI to
+                        deliver answers and recommendations. If your business isn’t showing up in
+                        these AI responses, you risk being invisible.
+                        <br />
+                        <br />
+                        That’s why <span className="font-semibold">Bixeltek</span> uses an
+                        AI-First SEO approach: strategies built for today’s search reality, not
+                        yesterday’s.
                     </p>
-                    <p className="mt-2 text-[16px] md:text-lg text-gray-300">
-                        Explore how our tailored approach delivers measurable success, increasing engagement, conversions, and brand visibility
-                        in a competitive landscape.
-                    </p>
-                    <div className="mt-6 grid grid-cols-2 md:grid-cols-2 gap-5">
-                        {industries.map((industry, index) => (
-                            <div key={index} className="flex items-center text-lg text-white">
-                                <span className="text-white text-xl inline-block  mr-3">{industry.icon}</span>
-                                <h2 className='font-poppins text-xs md:text-sm'>SEO for {industry.name}</h2>
-                            </div>
-                        ))}
-                    </div>
-                    <Link href={'/industries'}>
-                        <button className=" mt-6 md:mt-8 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow hover:bg-purple-700">
-                            Learn More
-                        </button>
-                    </Link>
                 </div>
 
-                <div className="flex w-full lg:w-1/2 justify-center gap-4 p-1">
-                    <div className='w-1/3 flex flex-col  items-center justify-center gap-3'>
-                        <Image src={healthcare} alt='healthcare' className='rounded-xl'></Image>
-                        <Image src={oil} alt='oil' className='rounded-xl'></Image>
+                {/* Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6 max-w-7xl text-white mx-auto text-center">
+                    {/* Card 1 */}
+                    <div className="flex flex-col gap-3 text-xl items-center border-none md:border-r md:border-dashed border-blue-500 justify-center p-6">
+                        <span className="text-4xl">🧠</span>
+                        <h3 className="mt-2 font-semibold font-poppins">AI Overviews (AIO)</h3>
+                        <p className="text-sm mt-2">
+                            Be seen where it matters most: in Google’s AI summaries. We help your
+                            brand get cited so customers discover your business in the answers they
+                            trust.
+                        </p>
                     </div>
-                    <div className='w-1/3 flex flex-col gap-3'>
-                        <Image src={roofing} alt='roofind' className='rounded-xl'></Image>
-                        <Image src={pet} alt='pet' className='rounded-xl'></Image>
-                        <Image src={school} alt='dental' className='rounded-xl'></Image>
+
+                    {/* Card 2 */}
+                    <div className="flex flex-col gap-3 text-xl items-center border-none md:border-r md:border-dashed border-blue-500 justify-center p-6">
+                        <span className="text-4xl">🎯</span>
+                        <h3 className="mt-2 font-semibold font-poppins">
+                            Answer Engine Optimization (AEO)
+                        </h3>
+                        <p className="text-sm mt-2">
+                            Voice assistants and AI tools are becoming decision-makers. We optimize
+                            your content so when people ask, “Who’s the best in my area?” — the
+                            answer is you.
+                        </p>
                     </div>
-                    <div className='w-1/3 flex flex-col justify-center gap-3'>
-                        <Image src={lawncare} alt='lawncare' className='rounded-xl'></Image>
-                        <Image src={blackcar} alt='automobiles' className='rounded-xl'></Image>
+
+                    {/* Card 3 */}
+                    <div className="flex flex-col gap-3 text-xl items-center justify-center p-6">
+                        <span className="text-4xl">⚡</span>
+                        <h3 className="mt-2 font-semibold font-poppins">
+                            Generative Engine Optimization (GEO)
+                        </h3>
+                        <p className="text-sm mt-2">
+                            Search is conversational. We ensure your business appears in
+                            AI-generated recommendations that influence buying decisions before ads
+                            even appear.
+                        </p>
                     </div>
                 </div>
+
+                {/* Closing Statement */}
+                <div className="text-center max-w-[90%] md:max-w-4xl mx-auto">
+                    <p className="text-white text-[15px] md:text-[16px] leading-relaxed">
+                        With our AI-First SEO approach, your business isn’t just ranking — it’s
+                        being recommended as the top provider in your region.
+                    </p>
+                    <Link href={'/blog/future-of-local-seo-ai-search-2025'}>
+                        <p className="text-blue-500 mt-4 font-semibold cursor-pointer hover:underline">
+                            Explore our full strategy in this in-depth blog on AI-First SEO
+                        </p>
+                    </Link>
+
+                </div>
             </section>
-            <section className="py-10 bg-white">
+            <IndustryCarouselSection />
+            <SeoSection6 />
+            <FAQSectionSEO />
+
+
+            {/* <section className="py-10 bg-white">
                 <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 
                     <div className="w-2/3 lg:w-1/3 mx-auto text-center mb-6">
@@ -534,8 +474,7 @@ export default function Seo() {
                     </div>
 
                 </div>
-            </section>
-            <DarkFaqSection faqs={faqs} />
+            </section> */}
         </>
     );
 }
