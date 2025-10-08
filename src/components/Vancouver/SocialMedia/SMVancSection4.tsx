@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
-import socialImg from "@/assets/3d-render-digital-communication-background.png"; // replace with your actual image
+import socialImg from "@/assets/Tash hair _ social posts.jpg"; // replace with your actual image
 
 export default function SocialTrustSection() {
     const valuePoints = [
@@ -15,7 +15,7 @@ export default function SocialTrustSection() {
     ];
 
     return (
-        <section className="bg-black max-w-[85%] mx-auto py-20 px-6 md:px-10 flex flex-col md:flex-row items-center justify-center gap-12">
+        <section className="bg-black sm:max-w-[95%] md:max-w-[85%] mx-auto py-10 md:py-20 px-6 md:px-10 flex flex-col md:flex-row items-center justify-center gap-12">
             {/* Left Side - Text */}
             <div className="md:w-1/2 text-white flex flex-col gap-6">
                 <h2 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -51,12 +51,12 @@ export default function SocialTrustSection() {
             </div>
 
             {/* Right Side - Image */}
-            <div className="md:w-1/2 flex justify-center">
+            <div className="w-full md:w-1/2 flex justify-center">
                 <Image
                     src={socialImg}
                     alt="Social media marketing in Vancouver"
                     priority
-                    className="rounded-xl shadow-lg w-full h-auto md:w-[95%] lg:w-[120%] object-contain"
+                    className="rounded-xl shadow-lg w-full h-auto md:w-[95%] lg:w-[75%] object-contain"
                 />
             </div>
 

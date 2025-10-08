@@ -12,7 +12,7 @@ import healthcare from "@/assets/digital marketing for health care practices.jpg
 import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
-export default function DMIndustries(): JSX.Element {
+export default function IndustriesTS(): JSX.Element {
     const [carouselOffset, setCarouselOffset] = useState<number>(0);
 
     const cardWidth: number = 450;
@@ -36,19 +36,15 @@ export default function DMIndustries(): JSX.Element {
         <section className="pt-20 mt-10 pb-20  bg-[black] z-10 overflow-hidden">
             <div className="w-full relative text-center text-white pb-10">
                 <h1 className="text-3xl md:text-5xl mx-auto max-w-[90%] md:max-w-full xl:text-7xl font-bold mb-2">
-                    <span className=" text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">
-                        Digital Marketing Solutions Tailored for <br></br> Every Industry in Toronto
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">
+                        SEO Services in Toronto <br></br> That Drive Traffic, Leads, and Growth
                     </span>
                 </h1>
-                {/* <h1 className="text-5xl xl:text-7xl font-bold mb-4">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500">
-                        SERVE
-                    </span>
-                </h1> */}
                 <p className="text-[16px] xl:text-lg text-gray-50 max-w-[100%] md:max-w-2xl mx-auto">
-                     Every industry has unique challenges. We design strategies that align with your goals and customer journey.
+                    From local startups to large enterprises, our SEO strategies are built to boost visibility, rank higher on Google, and attract your ideal Toronto audience.
                 </p>
             </div>
+
             <div className="carousel-container md:pl-[500px] relative w-full overflow-hidden">
                 <div
                     className="carousel flex gap-6 px-8 w-max transform transition-transform duration-500"
