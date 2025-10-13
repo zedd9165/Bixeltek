@@ -1,45 +1,45 @@
-"use client";
 
+"use client";
 import React from "react";
 import Link from "next/link";
 
-export default function DigitalMarketingServicesEasternProvince() {
+export default function DigitalMarketingServicesRiyadh() {
   const services = [
     {
       title: "Google Ads Management",
       description:
-        "Instant visibility, high-intent targeting, and lower cost per lead. We create and optimize ad campaigns that connect your business with ready-to-buy customers across Khobar, Dammam, and beyond.",
-      link: "/saudi-arabia/eastern-province/google-ads-management",
+        "Instant visibility, high-intent targeting, and smarter bidding. We design campaigns that capture Arabic and English search audiences in Riyadh with measurable lead tracking.",
+      link: "/riyadh/google-ads-management",
     },
     {
       title: "SEO & Local Search Optimization",
       description:
-        "Boost your visibility across Arabic and English searches. From technical SEO to Google Map optimization, we help your business rank where your customers are searching most.",
-      link: "/saudi-arabia/eastern-province/seo-services",
+        "From technical SEO to topical mapping and Google Business optimization — we build bilingual authority so your brand ranks where it matters.",
+      link: "/riyadh/seo-services",
     },
     {
       title: "Web Design & Development",
       description:
-        "Websites that convert — not just impress. We build responsive, SEO-friendly, and high-converting websites tailored specifically for Saudi audiences and regional trends.",
-      link: "/saudi-arabia/eastern-province/web-design-services",
+        "Fast, conversion-optimized websites built on Next.js or WordPress. Every site is SEO-ready, mobile-first, and tracked for conversions.",
+      link: "/riyadh/web-design-development",
     },
     {
       title: "Social Media Marketing",
       description:
-        "Build awareness and community through data-backed storytelling. We design campaigns that drive engagement and loyalty across Instagram, LinkedIn, TikTok, and more.",
-      link: "//saudi-arabia/eastern-province/social-media-management",
+        "Storytelling that converts — creative campaigns on Meta, LinkedIn, and TikTok designed for engagement and lead generation.",
+      link: "/riyadh/social-media-marketing",
     },
     {
       title: "Branding & Creative Strategy",
       description:
-        "Your visual identity defines your reputation. We craft premium, consistent brand experiences that earn trust and differentiate your business in a competitive Saudi market.",
-      link: "#",
+        "From logos to corporate identity and ad creatives, we craft brand visuals that inspire trust and recognition.",
+      link: "/riyadh/branding-and-creative",
     },
     {
       title: "Analytics & Conversion Optimization",
       description:
-        "What gets measured, gets improved. We install advanced analytics to track performance, refine funnels, and make decisions backed by real data — not guesswork.",
-      link: "#",
+        "GA4 dashboards, funnel tracking, and CRO experiments that turn data into decisions — and decisions into revenue.",
+      link: "/riyadh/analytics-and-cro",
     },
   ];
 
@@ -56,13 +56,12 @@ export default function DigitalMarketingServicesEasternProvince() {
         {/* Heading + Intro */}
         <div className="max-w-[90%] md:max-w-[80%] mx-auto mb-10 text-center">
           <h2 className="text-white text-3xl lg:text-6xl font-inter mb-3 font-semibold">
-            Comprehensive Digital Marketing Services{" "}
-            <span className="text-yellow-500">for Businesses Across the Eastern Province</span>
+             Comprehensive Digital Marketing Services <br /> 
+            <span className="text-yellow-500"> for Riyadh Businesses</span>
           </h2>
           <p className="text-gray-100 text-base md:text-[17px] tracking-wider mt-4 max-w-4xl mx-auto leading-relaxed">
-            Our team manages end-to-end marketing solutions — from strategic planning and content
-            creation to campaign execution and reporting. We help you stay visible, competitive, and
-            profitable in a fast-changing Saudi market.
+            Our team manages your entire digital ecosystem — from campaign strategy and creative design to analytics and reporting. We help Riyadh’s ambitious brands stay visible, profitable, and ahead of their competitors.
+
           </p>
         </div>
 
@@ -76,7 +75,7 @@ export default function DigitalMarketingServicesEasternProvince() {
               <h3 className="text-white text-2xl font-bold text-center mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-300 text-sm text-center mb-3 leading-relaxed">
+              <p className="text-gray-300 text-base text-center mb-3 leading-relaxed">
                 {service.description}
               </p>
               <Link href={service.link}>
