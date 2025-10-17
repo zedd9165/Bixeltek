@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { HiChevronDown, HiMenu, HiX } from 'react-icons/hi';
-import { link } from 'fs';
 import { SiGoogleads, SiInstagram } from "react-icons/si";
 import { TbDeviceImacSearch } from 'react-icons/tb';
 import { IoLogoReact } from 'react-icons/io5';
@@ -79,57 +78,57 @@ export const Header = () => {
             { name: "Social Media Marketing", link: "/social-media-marketing-agency-hyderabad" },
           ],
         },
-        {
-          name: "Delhi",
-          link: "#",
-          services: [
-            { name: "SEO Services in Delhi", link: "#" },
-          ],
-        },
-        {
-          name: "Bangalore",
-          link: "#",
-          services: [
-            { name: "SEO Services in Bangalore", link: "#" },
-          ],
-        },
+        // {
+        //   name: "Delhi",
+        //   link: "#",
+        //   services: [
+        //     { name: "SEO Services in Delhi", link: "#" },
+        //   ],
+        // },
+        // {
+        //   name: "Bangalore",
+        //   link: "#",
+        //   services: [
+        //     { name: "SEO Services in Bangalore", link: "#" },
+        //   ],
+        // },
       ],
     },
-    usa: {
-      title: "United States",
-      link: "#",
-      cities: [
-        {
-          name: "New York",
-          link: "#",
-          services: [
-            { name: "SEO Services in New York", link: "#" },
-            { name: "Social Media Marketing", link: "#" },
-          ],
-        },
-        {
-          name: "Chicago",
-          link: "#",
-          services: [
-            { name: "SEO Services in Chicago", link: "#" },
-          ],
-        },
-      ],
-    },
-    uk: {
-      title: "United Kingdom",
-      link: "#",
-      cities: [
-        {
-          name: "London",
-          link: "#",
-          services: [
-            { name: "SEO Services in London", link: "#" },
-            { name: "PPC in London", link: "#" },
-          ],
-        },
-      ],
-    },
+    // usa: {
+    //   title: "United States",
+    //   link: "#",
+    //   cities: [
+    //     {
+    //       name: "New York",
+    //       link: "#",
+    //       services: [
+    //         { name: "SEO Services in New York", link: "#" },
+    //         { name: "Social Media Marketing", link: "#" },
+    //       ],
+    //     },
+    //     {
+    //       name: "Chicago",
+    //       link: "#",
+    //       services: [
+    //         { name: "SEO Services in Chicago", link: "#" },
+    //       ],
+    //     },
+    //   ],
+    // },
+    // uk: {
+    //   title: "United Kingdom",
+    //   link: "#",
+    //   cities: [
+    //     {
+    //       name: "London",
+    //       link: "#",
+    //       services: [
+    //         { name: "SEO Services in London", link: "#" },
+    //         { name: "PPC in London", link: "#" },
+    //       ],
+    //     },
+    //   ],
+    // },
     saudi: {
       title: "Saudi Arabia",
       link: "#",
@@ -157,20 +156,20 @@ export const Header = () => {
         },
       ],
     },
-    uae: {
-      title: "United Arab Emirites",
-      link: "#",
-      cities: [
-        {
-          name: "Dubai",
-          link: "#",
-          services: [
-            { name: "SEO Services in Dubai", link: "#" },
-            { name: "PPC in Dubai", link: "#" },
-          ],
-        },
-      ],
-    },
+    // uae: {
+    //   title: "United Arab Emirites",
+    //   link: "#",
+    //   cities: [
+    //     {
+    //       name: "Dubai",
+    //       link: "#",
+    //       services: [
+    //         { name: "SEO Services in Dubai", link: "#" },
+    //         { name: "PPC in Dubai", link: "#" },
+    //       ],
+    //     },
+    //   ],
+    // },
   };
 
   const posts = [
@@ -243,7 +242,7 @@ export const Header = () => {
       title: "Analytics Reporting",
       desc: "Track and analyze your business metrics for smarter decisions.",
       icon: <AiOutlineLineChart size={24} />,
-      link: "/services/analytics-reporting",
+      link: "#",
       image: anr
     },
     {
@@ -251,7 +250,7 @@ export const Header = () => {
       title: "Graphic Design",
       desc: "Create stunning visuals to elevate your brand identity.",
       icon: <AiOutlinePicture size={24} />,
-      link: "/services/graphic-design",
+      link: "#",
       image: graphic
     },
   ];
@@ -420,6 +419,7 @@ export const Header = () => {
                   {/* Left: Services (80%) */}
                   <div className="w-[80%] grid grid-cols-3 gap-4 px-10">
                     {services.map((service) => (
+                      <Link href={service.link}>
                       <div
                         key={service.id}
                         onMouseEnter={() => setHoveredService(service)}
@@ -431,6 +431,7 @@ export const Header = () => {
                           <p className="text-gray-500 text-sm">{service.desc}</p>
                         </div>
                       </div>
+                      </Link>
                     ))}
                   </div>
 

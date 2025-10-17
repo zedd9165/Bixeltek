@@ -26,6 +26,7 @@ import DataBeatsGuesswork from '@/components/Saudi/Riyadh/GoogleAds/SaudiRiGASec
 import SaudiRiIndustries from '@/components/Saudi/Riyadh/SaudiRiInd';
 import ContactFromNew from '@/components/ContactFormNew';
 import React from 'react'
+import SaudiRiIndustry from '@/components/Saudi/Riyadh/GoogleAds/SaudiRiGAInd';
 
 export default function page() {
   return (
@@ -38,7 +39,8 @@ export default function page() {
    <RiyadhGoogleAdsFramework/>
    <GoogleAdsServicesRiyadh/>
    <RiyadhGoogleAdsWorkflow/>
-   <SaudiRiIndustries />
+   {/* <SaudiRiIndustries /> */}
+   <SaudiRiIndustry/>
    <DataBeatsGuesswork />
    <section
   className="bg-black py-20 px-4 md:px-20 flex flex-col md:flex-row items-center gap-10"
@@ -47,7 +49,7 @@ export default function page() {
   {/* LEFT SIDE — TEXT */}
   <div className="w-full md:w-1/2 flex flex-col justify-start items-start px-6">
     <h2 className="text-4xl md:text-6xl font-inter font-bold text-white mb-6">
-      Ready to Grow With <span className="text-yellow-600">Riyadh’s Google Partner Agency?</span>
+      Ready to Grow With <span className="text-yellow-500">Riyadh’s Google Partner Agency?</span>
     </h2>
 
     <p className="text-gray-50 font-poppins text-base md:text-lg leading-relaxed mb-8">
