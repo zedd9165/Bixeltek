@@ -2,17 +2,18 @@
 import React from "react";
 import Image from "next/image";
 import ctaBg from "@/assets/EVP_Banner.png";
+import Link from "next/link";
 
 const CodedCTASection = () => {
   return (
     <section className="relative w-[90%] md:w-[85%] my-10 md:my-20 rounded-[40px] mx-auto bg-gray-800 overflow-hidden">
       {/* 🖼️ Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 ">
         <Image
           src={ctaBg}
           alt="CTA Background"
           fill
-          className="object-cover object-right opacity-100 rounded-[40px]"
+          className="object-cover object-right md:object-right opacity-100 rounded-[40px]"
         />
       </div>
 
@@ -27,13 +28,17 @@ const CodedCTASection = () => {
           <p className="text-base md:text-xl mb-6">
             Bixeltek engineers websites that bridge marketing, design, and technology — built for longevity, speed, and measurable ROI.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
+            <a href='mailto:zee@bixeltek.com'>
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition">
               Talk to our Developer
             </button>
+            </a>
+            <Link href='#form'>
             <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-md transition">
               Request a Consultation
             </button>
+            </Link>
           </div>
         </div>
 

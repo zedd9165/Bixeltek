@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import phoneMockup from "@/assets/phone finanacce.png";
+import Link from "next/link";
 
 export default function PaymentHeroSection() {
     return (
@@ -26,7 +27,8 @@ export default function PaymentHeroSection() {
                        Bixeltek integrates leading gateways — Razorpay, Stripe, PayTabs, and PayPal — ensuring every transaction is fast, verified, and globally compliant. Our architecture is engineered for trust, PCI security, and conversion-optimized checkout flows, so your customers can pay confidently in any currency, on any device, without ever hitting friction.
                     </p>
 
-                    <div className="flex justify-center md:justify-start gap-4 mt-2">
+                    <div className="flex flex-col md:flex-row justify-center md:justify-start gap-4 mt-2">
+                        <Link href="#form">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -34,6 +36,8 @@ export default function PaymentHeroSection() {
                         >
                             Get Started
                         </motion.button>
+                        </Link>
+                        <Link href="/contact-us">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -41,6 +45,7 @@ export default function PaymentHeroSection() {
                         >
                             Get In Touch With Us
                         </motion.button>
+                        </Link>
                     </div>
                 </motion.div>
 
