@@ -9,43 +9,43 @@ export default function DigitalMarketingServicesRiyadh() {
       title: "Google Ads Management",
       description:
         "Instant visibility, high-intent targeting, and smarter bidding. We design campaigns that capture Arabic and English search audiences in Riyadh with measurable lead tracking.",
-      link: "/riyadh/google-ads-management",
+      link: "/saudi-arabia/riyadh/google-ads-management",
     },
     {
       title: "SEO & Local Search Optimization",
       description:
         "From technical SEO to topical mapping and Google Business optimization — we build bilingual authority so your brand ranks where it matters.",
-      link: "/riyadh/seo-services",
+      link: "/saudi-arabia/riyadh/seo-services",
     },
     {
       title: "Web Design & Development",
       description:
         "Fast, conversion-optimized websites built on Next.js or WordPress. Every site is SEO-ready, mobile-first, and tracked for conversions.",
-      link: "/riyadh/web-design-development",
+      link: "/saudi-arabia/riyadh/web-design-development",
     },
     {
       title: "Social Media Marketing",
       description:
         "Storytelling that converts — creative campaigns on Meta, LinkedIn, and TikTok designed for engagement and lead generation.",
-      link: "/riyadh/social-media-marketing",
+      link: "/saudi-arabia/riyadh/social-media-marketing",
     },
     {
       title: "Branding & Creative Strategy",
       description:
         "From logos to corporate identity and ad creatives, we craft brand visuals that inspire trust and recognition.",
-      link: "/riyadh/branding-and-creative",
+      link: "/saudi-arabia/riyadh/branding-and-creative",
     },
     {
       title: "Analytics & Conversion Optimization",
       description:
         "GA4 dashboards, funnel tracking, and CRO experiments that turn data into decisions — and decisions into revenue.",
-      link: "/riyadh/analytics-and-cro",
+      link: "/saudi-arabia/riyadh/analytics-and-cro",
     },
   ];
 
   return (
     <section
-      className="relative py-14 md:py-24 bg-[#fffdf5] text-gray-900"
+      className="relative px-6 py-14 md:py-24 bg-[#fffdf5] text-gray-900"
       id="digital-marketing-services"
     >
       {/* Background Glows */}
@@ -54,7 +54,7 @@ export default function DigitalMarketingServicesRiyadh() {
 
       <div>
         {/* Heading + Intro */}
-        <div className="max-w-[90%] md:max-w-[80%] mx-auto mb-10 text-center">
+        <div className="lg:max-w-[80%] mx-auto mb-10 text-center">
           <h2 className="text-black text-3xl lg:text-6xl font-inter mb-3 font-semibold">
              Comprehensive Digital Marketing Services <br /> 
             <span className="text-yellow-500"> for Riyadh Businesses</span>
@@ -66,7 +66,7 @@ export default function DigitalMarketingServicesRiyadh() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 max-w-[75%] mx-auto mt-10 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[75%] mx-auto mt-10 gap-0">
           {services.map((service, index) => (
             <div
               key={index}
@@ -85,7 +85,7 @@ export default function DigitalMarketingServicesRiyadh() {
               </Link>
 
               {/* Decorative Plus Icons */}
-              {index % 4 === 0 && (
+              {/* {index % 4 === 0 && (
                 <span className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 text-black text-3xl z-30">
                   <i className="fa fa-plus text-2xl" aria-hidden="true"></i>
                 </span>
@@ -104,7 +104,7 @@ export default function DigitalMarketingServicesRiyadh() {
                 <span className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 text-black text-3xl z-30">
                   <i className="fa fa-plus text-2xl" aria-hidden="true"></i>
                 </span>
-              )}
+              )} */}
             </div>
           ))}
         </div>

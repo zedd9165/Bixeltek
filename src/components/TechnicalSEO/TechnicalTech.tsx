@@ -181,14 +181,14 @@ const TechnicalTech = () => {
   };
 
   return (
-    <section className="relative hidden md:block bg-black py-10 px-6 overflow-hidden">
+    <section className="relative hidden lg:block bg-black py-10 px-6 overflow-hidden">
       <div ref={containerRef} className="max-w-7xl mx-auto relative min-h-[800px]">
         {/* Title */}
         <div className="text-center mb-6">
           <h2 className="text-white text-6xl font-bold">
             The Tools Behind  <span className="text-blue-500">the Precision</span>
           </h2>
-          <p className="text-gray-400 mt-6 text-lg">
+          <p className="text-gray-400 my-6 text-lg">
             We use enterprise-grade tools and proprietary scripts to achieve consistency at scale.
           </p>
         </div>

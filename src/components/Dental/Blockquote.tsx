@@ -8,7 +8,7 @@ const BlockQuoteSection = () => {
   return (
     <section className="w-full bg-gray-50">
       <div
-        className="relative flex justify-center items-center text-white min-h-[70vh] shadow-xl p-10 overflow-hidden"
+        className="relative flex justify-center items-center text-white min-h-[70vh] shadow-xl p-5 lg:p-10 overflow-hidden"
         style={{
           backgroundImage: `url('/cta_bg_1.jpeg')`,
           backgroundSize: "cover",
@@ -19,9 +19,9 @@ const BlockQuoteSection = () => {
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Content Wrapper */}
-        <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ">
+        <div className="relative z-10 md:container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ">
           {/* Left Text Section */}
-          <div className="text-center lg:text-left">
+          <div className="text-left">
             <h2 className="text-3xl md:text-6xl font-bold mb-4 text-white">
               Don’t Wait—Your Competitors Aren’t
             </h2>

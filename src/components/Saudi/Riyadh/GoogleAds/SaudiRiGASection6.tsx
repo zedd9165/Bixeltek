@@ -9,43 +9,43 @@ export default function GoogleAdsServicesRiyadh() {
       title: "Search Campaigns",
       description:
         "Capture ready-to-convert customers actively searching for your services in Riyadh. Every ad group is intent-driven, keyword-mapped, and A/B tested for maximum ROI.",
-      link: "/riyadh/google-ads/search-campaigns",
+      link: "#",
     },
     {
       title: "Performance Max (PMax)",
       description:
         "Leverage Google’s AI to target across Search, YouTube, and Display — all from one smart campaign. Perfect for Saudi businesses aiming for visibility at scale.",
-      link: "/riyadh/google-ads/performance-max",
+      link: "#",
     },
     {
       title: "Display Campaigns",
       description:
         "Stay visible across top Arabic and English websites. Our design team creates compelling display ads that build awareness and retarget high-value users across Riyadh and beyond.",
-      link: "/riyadh/google-ads/display-campaigns",
+      link: "#",
     },
     {
       title: "YouTube Ads",
       description:
         "Turn storytelling into conversions. We craft localized YouTube campaigns with powerful hooks, precise targeting, and high-retention video sequences tailored to Saudi audiences.",
-      link: "/riyadh/google-ads/youtube-ads",
+      link: "#",
     },
     {
       title: "Shopping Ads (E-commerce)",
       description:
         "Dominate e-commerce searches with optimized product feeds, custom labels, and ROAS-driven structures. Ideal for Saudi retailers scaling on Google Shopping.",
-      link: "/riyadh/google-ads/shopping-ads",
+      link: "#",
     },
     {
       title: "Remarketing Campaigns",
       description:
         "Re-engage past visitors with dynamic remarketing. From cart abandoners to returning customers — we personalize every message to drive higher lifetime value.",
-      link: "/riyadh/google-ads/remarketing",
+      link: "#",
     },
   ];
 
   return (
     <section
-      className="relative py-14 md:py-24 bg-[#fffdf5] text-black"
+      className="relative px-6 py-14 lg:py-24 bg-[#fffdf5] text-black"
       id="google-ads-services-riyadh"
     >
       {/* Background Glows */}
@@ -54,8 +54,8 @@ export default function GoogleAdsServicesRiyadh() {
 
       <div>
         {/* Heading + Intro */}
-        <div className="max-w-[90%] md:max-w-[80%] mx-auto mb-10 text-center">
-          <h2 className="text-black text-3xl lg:text-6xl font-inter mb-3 font-semibold">
+        <div className="lg:max-w-[80%] mx-auto mb-10 text-center">
+          <h2 className="text-black text-3xl md:text-6xl font-inter mb-3 font-semibold">
             Full-Spectrum{" "}
             <span className="text-yellow-500">Google Ads Management for Riyadh Businesses</span>
           </h2>
@@ -69,7 +69,7 @@ export default function GoogleAdsServicesRiyadh() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 max-w-[75%] mx-auto mt-10 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[75%] mx-auto mt-10 gap-0">
           {services.map((service, index) => (
             <div
               key={index}
