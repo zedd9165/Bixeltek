@@ -57,13 +57,128 @@ import { PhoneCall } from "lucide-react";
 import GradientBorderContainersMob from '@/components/GoogleAds/TimelineMobile';
 import TechStackSection from '@/components/GoogleAds/Section9';
 import Link from 'next/link';
+import cleaningcomp from "@/assets/digital marketing servies for cleaning companies.jpg";
+import oil from "@/assets/digital marketing for oil refinaries.jpg"
+import pet from "@/assets/digital marketing for pet stores.jpg"
+import roofing from "@/assets/digital marketing for roofing industries.jpg"
+import dental from "@/assets/digital marketing for health care practices.jpg"
+import lawncare from "@/assets/digital marketing for lawn care services.jpg"
+import blackcar from "@/assets/digital marketing for car detailers.jpg"
+import healthcare from "@/assets/digital marketing for health care practices.jpg"
+import LocationIndustrySection from '@/components/Common/location/LocationIndustrySection';
+import LocationProcessSection from '@/components/Common/location/LocationProcessSection';
+import DynamicIndustrySection from '@/components/Common/IndustryCarousel';
+
+const steps = [
+  {
+    number: '01',
+    title: 'Research & Analysis',
+    text: 'In-depth keyword research, competitor benchmarking, and market insights ensuring stronger, data-driven advertising performance.',
+    gradient: 'from-blue-500 via-blue-400 to-[#131313]',
+    color: 'text-blue-500',
+  },
+  {
+    number: '02',
+    title: 'Campaign Architecture',
+    text: 'Scalable account structures built for efficiency, higher quality scores, and long-term advertising success growth.',
+    gradient: 'from-green-500 via-teal-400 to-[#13131333]',
+    color: 'text-yellow-500',
+  },
+  {
+    number: '03',
+    title: 'Ad Copy & Creatives',
+    text: 'Compelling ad copy and compliant creatives designed to maximize visibility, engagement, and consistent click-through rates.',
+    gradient: 'from-yellow-400 via-yellow-300 to-[#13131333]',
+    color: 'text-red-500',
+  },
+  {
+    number: '04',
+    title: 'Landing Page Optimization',
+    text: 'Fast, responsive, and conversion-focused landing pages designed to improve mobile experiences and drive results.',
+    gradient: 'from-pink-500 via-purple-400 to-[#13131333]',
+    color: 'text-orange-500',
+  },
+  {
+    number: '05',
+    title: 'Conversion Tracking',
+    text: 'Robust GA4, GTM, and CRM integrations delivering full-funnel tracking and actionable performance insights.',
+    gradient: 'from-indigo-500 via-indigo-400 to-[#13131333]',
+    color: 'text-teal-500',
+  },
+  {
+    number: '06',
+    title: 'Continuous Scaling',
+    text: 'Ongoing A/B testing, budget optimization, and audience expansion strategies for consistent campaign performance improvements.',
+    gradient: 'from-red-500 via-[#131313] to-[#13131333]',
+    color: 'text-pink-500',
+  },
+];
+
+const industries = [
+                        {
+                            id: "health",
+                            img: healthcare,
+                            label: "Digital Marketing for Healthcare",
+                            text: "Health Care Practices",
+                            description: "Local SEO + targeted ads to book 30+ new patients per month.",
+                        },
+                        {
+                            id: "auto",
+                            img: blackcar,
+                            label: "Digital Marketing for Automobiles",
+                            text: "Automobile industries",
+                            description: "Maps optimization + hyperlocal PPC to drive more calls and foot traffic.",
+                        },
+                        {
+                            id: "cleaning",
+                            img: cleaningcomp,
+                            label: "Digital Marketing for Cleaning Companies",
+                            text: "Cleaning Industries",
+                            description: "Maps optimization + hyperlocal PPC to drive more calls and foot traffic.",
+                        },
+                        {
+                            id: "roofing",
+                            img: roofing,
+                            label: "Digital Marketing for Roofing Companies",
+                            text: "Roofing Industries",
+                            description: "High-ticket lead funnels built for real estate and project-based services.",
+                        },
+                        {
+                            id: "lawncare",
+                            img: lawncare,
+                            label: "Digital Marketing for Lawn Care and Landscaping",
+                            text: "Lawn Care Industries",
+                            description: "Maps optimization + hyperlocal PPC to drive more calls and foot traffic.",
+                        },
+                        {
+                            id: "dental",
+                            img: dental,
+                            label: "Digital Marketing for Dental Clinic",
+                            text: "Dental Clinics",
+                            description: "Local SEO + targeted ads to book 30+ new patients per month.",
+                        },
+                        {
+                            id: "pet",
+                            img: pet,
+                            label: "Digital Marketing for Pet Stores",
+                            text: "Pet Stores",
+                            description: "Product SEO, performance ads & retargeting funnels to scale sales.",
+                        },
+                        {
+                            id: "oil",
+                            img: oil,
+                            label: "Digital Marketing for Oil Refineries",
+                            text: "Oil Refineries",
+                            description: "Paid growth loops, demo-booking strategies, and B2B marketing that closes deals.",
+                        }
+                    ]
 
 export default function page() {
 
 
     return (
         <>
-            <section className="relative flex flex-col items-center justify-center h-[70vh] lg:h-[100vh]  bg-black -mt-32 text-center px-6 overflow-hidden">
+            <section className="relative flex flex-col items-center justify-center min-h-[70vh] lg:min-h-[80vh]  bg-black -mt-32 text-center px-6 overflow-hidden">
                 <div className='flex justify-center items-center'>
                     {/* Blue Sphere Glow */}
                     <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-blue-500 opacity-20 blur-3xl pointer-events-none" />
@@ -102,15 +217,50 @@ export default function page() {
             <Section1 />
             <WhyGoogleAds />
             <ProtectAds />
-            <GradientBorderContainersMob/>
+            {/* <GradientBorderContainersMob/> */}
+            <LocationProcessSection
+            heading={
+                <span>A <span className="text-blue-500">Proven Framework</span> to Scale Profitably</span>
+            }
+            description='Our Google Ads process is battle-tested across multiple industries and regions:'
+            steps={steps}
+            cta={{
+                text:'Talk To Our Certified PPC Specialist',
+                href:'tel:+919100032301'
+            }}
+            footerText='This isn’t theory. It’s a repeatable framework we’ve used to drive results in the USA, Canada, India, and Saudi Arabia.'
+            />
             <BiddingStrategies />
             <GoogleAdsCostSection/>
-            <IndustryCarouselSection />
+            {/* <IndustryCarouselSection /> */}
+            <DynamicIndustrySection
+            backgroundColor='bg-black'
+            heading={<>
+            <span><span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">
+                        INDUSTRIES WE
+                    </span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500">
+                        SERVE
+                    </span></span>
+            </>}
+            description='Discover the diverse industries we proudly cater to, offering innovative solutions to help you excel in your field.'
+            industries={industries}
+            />
+            {/* <LocationIndustrySection
+            heading={<>
+            <span><span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">
+                        INDUSTRIES WE
+                    </span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500">
+                        SERVE
+                    </span></span>
+            </>}
+            description='Discover the diverse industries we proudly cater to, offering innovative solutions to help you excel in your field.'
+            industries={industries}
+            /> */}
             <BixeltekAdvantage />
             <TechStackSection />
             <GoogleAdsSection10/>
             <FAQSection8/>
-           <section className='bg-black p-2 md:p-20 mx-auto flex flex-col justify-center gap-10 items-center lg:flex-row ' id='form'>
+           <section className='bg-black md:p-20 mx-auto flex flex-col justify-center gap-10 items-center lg:flex-row ' id='form'>
                 <div className="w-full mt-14 md:mt-0 flex justify-center items-center px-6">
                     <div className="space-y-5 text-white max-w-xl ">
                         <h2 className="text-4xl md:text-4xl capitalize font-bold">
@@ -133,7 +283,7 @@ export default function page() {
                         </div>
                     </div>
                 </div>
-                <div className='w-full flex justify-center items-center' >
+                <div className='w-full flex justify-center items-center px-6' >
                     <ContactFromNew />
                 </div>
             </section>

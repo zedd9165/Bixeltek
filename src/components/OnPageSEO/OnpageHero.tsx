@@ -9,6 +9,7 @@ import { LogoTickerSaudi } from "@/components/LogoTicker2";
 import semanticIcon from "@/assets/star-shine-svgrepo-com.png"
 import ctrIcon from "@/assets/google-authenticator-svgrepo-com.png";
 import multilingualIcon from "@/assets/medal-ribbons-star-svgrepo-com.png";
+import { LogoTicker } from "@/sections/LogoTicker";
 
 // ✅ Background Image (optional — you can add a bg if desired)
 // import onpageBg from "@/assets/onpage-seo-bg.jpg";
@@ -33,7 +34,7 @@ export default function HeroOnPageSEO() {
 
         {/* ✅ Content */}
         <div className="flex justify-center items-center">
-          <div className="relative z-10 mt-24 max-w-7xl">
+          <div className="relative z-10 mt-28 md:mt-24 max-w-7xl">
             {/* H1 */}
             <h1 className="text-3xl md:text-6xl font-medium leading-tight text-white">
               On-Page SEO That Turns Every Paragraph{" "}
@@ -91,7 +92,9 @@ export default function HeroOnPageSEO() {
 
       {/* ✅ Popup Form + Logo Carousel */}
       <SEOButtonContactForm isVisible={isVisible} onClose={() => setIsVisible(false)} />
-      <LogoTickerSaudi />
+      <LogoTicker 
+      bg="bg-black"
+      />
     </>
   );
 }
